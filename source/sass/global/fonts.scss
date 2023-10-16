@@ -1,12 +1,11 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "";
 
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2");
-// }
+  font-display: swap;
+  src: url("../fonts/onest-regular.woff2") format("woff2");
+}
 
 @font-face {
   font-style: normal;
@@ -14,5 +13,41 @@
   font-family: "";
 
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+  src: url("../fonts/onest-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Onest";
+
+  font-display: swap;
+  src: url("../fonts/onest-medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Onest";
+
+  font-display: swap;
+  src: url("../fonts/onest-medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Onest";
+
+  font-display: swap;
+  src: url("../fonts/onest-semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Onest";
+
+  font-display: swap;
+  src: url("../fonts/onest-semibold.woff") format("woff");
 }

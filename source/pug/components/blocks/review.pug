@@ -1,0 +1,39 @@
+mixin review()
+  section.review
+    .container
+      h2.title.review__title.title--h2 Что вы думаете об&nbsp;этой&nbsp;книге?
+
+      .review__rate
+        span.review__rate-label Оцените статью
+        .review__rate-grade
+          span.title.title--h3 4
+          .review__rate-stars
+            +icon("star_yellow", 27, 27)
+            +icon("star_yellow", 27, 27)
+            +icon("star_yellow", 27, 27)
+            +icon("star_yellow", 27, 27)
+            +icon("star_grey", 27, 27)
+
+      .review__form.form
+        span.review__rate-label Добавить комментарий к книге
+        form(action="")
+          .form__inputs.form__inputs--name
+            label(for="firstname") Имя
+            input(type="text" id="firstname" name="firstname" placeholder="" value="Александр")
+          .form__inputs
+            label(for="email")
+            input(type="email" id="email" name="email" placeholder="Email")
+          .form__select.custom-select
+            .custom-select__top
+              span.custom-select__current Выберите книгу
+              +icon("drop_down", 9, 4).custom-select__icon
+            .custom-select__bottom
+              .custom-select__item JavaScript ниндзя
+              .custom-select__item Pragmatic Guide to JavaScript
+              .custom-select__item Pro JavaScript Techniques
+              .custom-select__item Выразительный JavaScript
+
+          .form__textarea
+            textarea(name="message" placeholder="Ваш отзыв")
+
+          button(type="submit").btn.btn--blue.form__submit Отправить

@@ -1,0 +1,15 @@
+.recup {
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+}
+
+.recup__text {
+  font-size: 16px;
+  line-height: 25.6px;
+  color: rgba(32, 35, 38, 1);
+}

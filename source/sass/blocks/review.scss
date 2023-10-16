@@ -1,0 +1,43 @@
+.review {
+  background-color: rgba(241, 241, 243, 1);
+  padding-top: 53px;
+  padding-bottom: 88px;
+
+  @media (max-width: 767px) {
+    padding-top: 22px;
+    padding-bottom: 50px;
+  }
+}
+
+.review__rate-grade {
+  display: flex;
+  align-items: center;
+  margin-bottom: 46px;
+}
+
+.review__rate-grade .title--h3 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.review__rate-stars {
+  margin-left: 8px;
+}
+
+.review__title {
+  @media (max-width: 767px) {
+    margin-bottom: 28px;
+  }
+}
+
+.review__rate-label {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+
+  @media (max-width: 767px) {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+

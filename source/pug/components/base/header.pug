@@ -2,16 +2,51 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "#",
+        text: "Cтатьи",
+        submenuLinks: {
+          link1: {
+            href: "#",
+            text: "Путь JavaScript"
+          },
+          link2: {
+            href: "#",
+            text: "Серверный JavaScript"
+          },
+          link3: {
+            href: "#",
+            text: "Как учить JavaScript"
+          },
+        },
+        hasArrow: true,
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Курсы",
+        submenuLinks: {
+          link1: {
+            href: "#",
+            text: "JavaScript Pro"
+          },
+          link2: {
+            href: "#",
+            text: "JavaScript для новичиков"
+          },
+          link3: {
+            href: "#",
+            text: "JavaScript ниндзя"
+          },
+        },
+        hasArrow: true,
+        //- activeState: true,
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Новости"
+      },
+      {
+        href: "#",
+        text: "О нас"
       },
     ]
 
@@ -19,18 +54,34 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +icon("logo", 104, 13)
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon("logo", 104, 13)
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+          //- +icon("logo", 104, 13)
+          +icon("menu", 20, 6)
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks
-              - const activeState = currentUrl === link.href
+              //- - const activeState = currentUrl === link.href
               li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
+
+                if(link.activeState)
+
+                  a.main-nav__link.is-active(href=link.href)= link.text
                 else
                   a.main-nav__link(href=link.href)= link.text
+
+                if (link.hasArrow)
+                  +icon("drop_down", 6, 3)
+
+                if link.submenuLinks
+                  ul.main-nav__sub-list
+                    each sublink in link.submenuLinks
+                      li.main-nav__sub-item
+                        a.main-nav__sub-link(href=link.href)= sublink.text
+
+          button.btn.btn--blue.main-nav__btn(type="button" data-open-modal="request") Начать учиться

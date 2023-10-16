@@ -1,0 +1,23 @@
+mixin posts()
+  section.posts
+    .container
+
+      h2.title.posts__title.title--h2 Похожие посты
+
+      .posts__slider.slider.swiper.mySwiper
+        .swiper-wrapper
+          .posts__slider-slide.swiper-slide
+            img(src="img/content/react.png" width="226", height="226", alt="React")
+            time(datetime="2022-12-12") 12 декабря
+            p.posts__name События жизненного цикла ReactJS
+
+          .posts__slider-slide.swiper-slide
+            img(src="img/content/grid.png" width="226", height="226", alt="Grid")
+            time(datetime="2022-12-10") 10 декабря
+            p.posts__name CSS Grids. Полное руководство
+
+          .posts__slider-slide.swiper-slide
+            img(src="img/content/js.png" width="226", height="226", alt="JS Books")
+            time(datetime="2022-12-05") 5 декабря
+            p.posts__name Асинхронность в JavaScript
+        .swiper-pagination

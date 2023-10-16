@@ -1,0 +1,44 @@
+.ads {
+  padding-top: 80px;
+  padding-bottom: 73px;
+  background-color: rgba(241, 241, 243, 1);
+
+  @media (max-width: 767px) {
+    padding-top: 20px;
+    padding-bottom: 44px;
+  }
+}
+
+.ads__wrapper figure {
+  margin: 0 auto;
+  width: 610px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.ads__img figcaption {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(32, 35, 38, 1);
+  margin-top: 13px;
+}
+
+.ads__img figcaption span {
+  color: rgba(45, 26, 167, 1);
+  text-decoration: underline;
+}
+
+.ads__img img {
+  @media (max-width: 767px) {
+    width: 100%;
+    margin: 0 auto;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 320px) {
+    object-position: -50px 0;
+  }
+}

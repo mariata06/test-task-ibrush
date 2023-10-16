@@ -1,0 +1,16 @@
+mixin modal-request()
+  h3.modal__description.title.title--h3 Начать учиться
+
+  .modal__form.form
+    p.form__paragraph Оставьте заявку и наш менеджер вам перезвонит.
+    form(action="")
+      .form__inputs.form__inputs--name
+        label(for="firstname") как вас зовут
+        input(type="text" id="firstname" name="firstname" placeholder="" value="Александр")
+      .form__inputs
+        label(for="email")
+        input(type="email" id="email" name="email" placeholder="Email")
+
+      button(type="submit").btn.btn--blue.form__submit Отправить
+
+    p.form__policy Нажимая кнопку «Отправить», вы соглашаетесь <a href="#">с&nbsp;политикой конфиденциальности</a>
